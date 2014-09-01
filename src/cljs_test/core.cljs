@@ -22,4 +22,4 @@
 (let [clicks (listen (dom/getElement "test") "click")
       derp (consumer clicks)]
   (go (while true
-        (.log js/console (<! derp)))))
+        (println (<! derp)))))
